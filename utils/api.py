@@ -126,7 +126,7 @@ async def _query_api(url, resp_obj):
 
     async with rate_limiter.throttle():
         start = time.time()
-        logger.info("Calling %s", url)
+        logger.info("Calling %s", 'https://pass-proxy-ssl.onrender.com/fetch/?url=' + url)
         if _session is None:
             if API_TOKEN is None:
                 _session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
