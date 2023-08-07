@@ -5,7 +5,7 @@ import pytz
 API_TOKEN = os.environ.get("JOMD_TOKEN", None)
 # Has no use, URI located at db.py
 DB_DIR = "utils/db/JOMD.db"
-SITE_URL = "'https://pass-proxy-ssl.onrender.com/fetch/?url=https://dmoj.ctu.edu.vn/"
+SITE_URL = "https://pass-proxy-ssl.onrender.com/fetch/?url=https://dmoj.ctu.edu.vn/"
 DEBUG_DB = False
 ADMIN_ROLES = ["Admin"]
 # Time zone
