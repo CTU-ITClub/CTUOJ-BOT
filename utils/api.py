@@ -132,7 +132,7 @@ async def _query_api(url, resp_obj):
                 _session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False))
             else:
                 _session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False), headers={"Authorization": "Bearer " + API_TOKEN})
-        async with _session.get(url) as resp:
+        async with _session.get('https://pass-proxy-ssl.onrender.com/fetch/?url=' + url) as resp:
             if resp_obj == "text":
                 resp = await resp.text()
             if resp_obj == "json":
